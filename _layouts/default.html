@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs" id="webpg-es">
+<head prefix="og: http://ogp.me/ns#">
+  <title>{{ page.title }}: Webpg.es</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" media="screen" href="/css/screen.css" />
+  <link rel="stylesheet" media="print" href="/css/print.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ page.description }}" />
+<!-- TODO: Set up a default image; override as needed in per-page YAML
+  <meta property="og:image" content="{{ page.webpges_img | absolute_url }}" />
+  <meta property="og:image:type" content="image/png" />
+-->
+
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="http://webpg.es/" rel="home">Webpg.es</a></h1>
+    <p class="tagline">Companion site for <cite>How to Design and Write Web Pages Today</cite>, 2nd edition</p>
+    <nav id="navigation">
+      <ul class="navigation">
+        <li class="accessibility"><a href="#content">Skip to page content</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article id="primary">
+      <h2>{{ page.title}}</h2>
+      {{ content }}
+    </article>
+  </main>
+
+  <aside id="supporting">
+    <h2>Supporting Content Heading</h2>
+  </aside>
+
+  <footer id="footer">
+    <p class="credits">
+      Site information, credits, license. Created with the
+      <a href="https://github.com/karlstolley/rpk">RPK</a>
+      using <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a>
+      and <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
+    </p>
+  </footer>
+
+<!--/#page-->
+</div>
+
+<script src="/js/site.js"></script>
+
+</body>
+</html>
