@@ -44,12 +44,22 @@
     <h2>Supporting Content Heading</h2>
   </aside>
 
-  <footer id="footer">
+  <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
     <p class="credits">
-      Site information, credits, license. Created with the
-      <a href="https://github.com/karlstolley/rpk">RPK</a>
-      using <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a>
-      and <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
+      The <cite property="dc:title">Companion Site for How to Design and Write Web Pages
+      Today</cite> by
+      <a href="https://karlstolley.com/"
+        property="cc:attributionName"
+        rel="cc:attributionURL">Karl Stolley</a>
+      is licensed under a
+      <a href="http://creativecommons.org/licenses/by/4.0/"
+        rel="license">Creative Commons Attribution 4.0 International License</a>. Based on a work at
+      <a href="https://webpg.es/" rel="dc:source">https://webpg.es/</a>.
+      Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
+      <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a> and
+      <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
+    </p>
+    <p>
       Spot a problem with this page? Report it on <a
       href="{{site.webpges_repo}}/issues/new?title=Problem+with+%22{{ page.title | uri_escape }}%22+%28{{page.path}}%29">GitHub</a>.
     </p>
