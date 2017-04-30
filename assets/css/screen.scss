@@ -26,8 +26,63 @@ html {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background: #353b41;
+  color: #f8f8f2;
+  font-family: "Aptifer Slab W04";
+  font-size: 18px;
+  line-height: 24px;
+  padding: 24px;
 }
 
+a {
+  color: #ffa04d; /* orange */
+  color: #ffc475; /* rev desat orange */
+  color: #ff9200; /* rev sat orange */
+
+  text-decoration: none;
+}
+/*
+nav {
+  background: darken(#353b41, 12%);
+}
+*/
+nav a {
+  color: #ff609d; /* pink*/
+  color: #de01e6; /* rev sat pink */
+  color: #e069e5; /* rev desat pink */
+  color: #ff3d3d; /* rev base red */
+  color: #ff7575; /* rev desat red */
+}
+footer a {
+  color: #80c2ff; /* blue */
+  color: #0f88e5; /* rev sat blue */
+  color: #71b2e4; /* rev desat blue */
+
+}
+h1 {
+   font-size: 27px;
+   line-height: 36px;
+   color: #999;
+}
+h1 a {
+  color: #ff609d; /* pink*/
+  color: #80c2ff; /* blue */
+  color: #c1ce67; /* green */
+  color: #d4fd00; /* rev sat green */
+  color: #e7fd74; /* rev desat green */
+}
+nav,
+footer,
+.tagline {
+  font-family: "Aptifer Sans W04";
+}
+.tagline {
+  position: absolute;
+  left: -10000px;
+}
+.home .tagline {
+  position: static;
+}
 /* Responsive Media */
 audio,
 img,
