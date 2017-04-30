@@ -1,7 +1,7 @@
 ---
 ---
 
-/* Screen CSS */
+/* Print CSS */
 
 /* Minified Eric Meyer reset CSS; see css/_reset.css */
 /* stylelint-disable*/
@@ -14,6 +14,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   Write custom styles in the appropriate sections below (BASE, LAYOUT, MODULAR, and
   STATE), whose labels are derived from the book Scalable and Modular Architecture for CSS
   (SMACSS) by Jonathan Snook. See https://smacss.com/
+
+  To save paper when testing print styles, see if your operating system or browser has a
+  Print Preview or Print to PDF feature.
 */
 
 /* ===== BASE STYLES ============ */
@@ -50,25 +53,56 @@ cite {
   font-style: italic;
 }
 
+/*
+  Print all text color as black, including links.
+*/
+
+* { color: black; }
+
+/*
+  No underlines or border-bottom on hyperlinks or abbreviations:
+*/
+a,
+abbr {
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+
 /* ===== LAYOUT STYLES ========== */
 /* Primarily ID selectors for positioning sectioning elements */
 
 
-
-
 /* ===== MODULAR STYLES ========= */
 /* Primarily class selectors for styling unique page components  */
-#navigation .accessibility {
-  /* Accessibly hide the accessibility components of the navigation */
-  position: absolute;
-  left: -10000px;
+
+/*
+  Automatically print the URLs from hyperlinks in the content area of a page, unless the
+  hyperlink is only a fragment identifier (beginning with #):
+*/
+#content a:after {
+   content: " (" attr(href) ") ";
+}
+#content a[href^="#"]:after {
+  content: "";
 }
 
+/*
+  Output the full title of abbreviations when printed, assuming the <abbr> element has a
+  title attribute.
+*/
+abbr[title]:after {
+  content: " (" attr(title) ") ";
+}
 
 
 /* ===== STATE STYLES =========== */
 /*
-  Media queries. Also class selectors from JavaScript, including feature detection.
-  JavaScript-dependent styles can be prefixed with the .hasjs class added in by the
-  `js/site.js` file.
+  Hide the the site navigation and the colophon's validator links and other material,
+  which are probably not necessary when a page is printed.
 */
+
+#navigation,
+.colophon {
+	display: none;
+}
