@@ -29,8 +29,20 @@ html {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-family: "Aptifer Slab W04";
+  font-size: 12pt;
+  line-height: 16pt;
+}
+nav,
+footer,
+.tagline {
+  font-family: "Aptifer Sans W04";
 }
 
+pre,
+code {
+	font-family: Monaco, Menlo, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
 /* Responsive Media */
 audio,
 img,
@@ -80,7 +92,8 @@ abbr {
   Automatically print the URLs from hyperlinks in the content area of a page, unless the
   hyperlink is only a fragment identifier (beginning with #):
 */
-#content a:after {
+#content a:after,
+a[rel="license"]:after {
    content: " (" attr(href) ") ";
 }
 #content a[href^="#"]:after {
@@ -103,6 +116,7 @@ abbr[title]:after {
 */
 
 #navigation,
-.colophon {
+.colophon,
+.problems {
 	display: none;
 }
