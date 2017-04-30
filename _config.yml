@@ -10,6 +10,11 @@ github_username:  karlstolley
 
 # Build settings
 markdown: kramdown
+# Turn off the built-in syntax highlighter
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
 #gems:
 #  - jekyll-feed
 exclude:
@@ -24,7 +29,3 @@ defaults:
       layout: "default"
       webpges_img: "/images/preview.png"
 
-# Turn off the built-in syntax highlighter
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
