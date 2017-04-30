@@ -11,15 +11,27 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /*
   End reset CSS.
 
-  Write custom styles in the appropriate sections below (BASE, LAYOUT, MODULAR, and
-  STATE), whose labels are derived from the book Scalable and Modular Architecture for CSS
-  (SMACSS) by Jonathan Snook. See https://smacss.com/
 */
 
-/* ===== BASE STYLES ============ */
-/* Primarily element selectors for content: headings, paragraphs, lists, and media */
+/*
+  Colors:
+*/
+  $pink: #de01e6; // base pink
+  $ltpink: #e069e5; // light pink
+  $red: #ff3d3d; // base red
+  $ltred: #ff7575; // light red
+  $orange: #ffc475; // base orange
+  $ltorange: #ff9200; // light orange
+  $green: #d4fd00; // base green
+  $ltgreen: #e7fd74; // light green
+  $blue: #0f88e5; // base blue
+  $ltblue: #71b2e4; // light blue
+  $text: #f8f8f2; // normal text
+  $dktext: #aaaaaa; // darkened text
+  $background: #353b41; // background slate-blue
 
-/* Optimal Typographic Rendering */
+
+/* ===== BASE STYLES ============ */
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
@@ -29,8 +41,8 @@ html {
   background: #353b41;
   color: #f8f8f2;
   font-family: "Aptifer Slab W04";
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 19px;
+  line-height: 26px;
   padding: 24px;
 }
 
@@ -46,12 +58,22 @@ nav {
   background: darken(#353b41, 12%);
 }
 */
+pre,
+code {
+  font-size: 90%;
+}
+pre code {
+  font-size: 100%;
+}
 nav a {
   color: #ff609d; /* pink*/
   color: #de01e6; /* rev sat pink */
   color: #e069e5; /* rev desat pink */
   color: #ff3d3d; /* rev base red */
   color: #ff7575; /* rev desat red */
+}
+footer {
+   color: #AAA;
 }
 footer a {
   color: #80c2ff; /* blue */
@@ -75,6 +97,7 @@ nav,
 footer,
 .tagline {
   font-family: "Aptifer Sans W04";
+  color: $dktext;
 }
 .tagline {
   position: absolute;
@@ -118,7 +141,10 @@ cite {
   position: absolute;
   left: -10000px;
 }
-
+.rights,
+.colophon {
+  display: inline;
+}
 
 
 /* ===== STATE STYLES =========== */
