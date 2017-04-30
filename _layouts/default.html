@@ -3,10 +3,10 @@
 <head prefix="og: http://ogp.me/ns#">
   <title>{{ page.title }}: Webpg.es</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" media="screen" href="/css/screen.css" />
-  <link rel="stylesheet" media="print" href="/css/print.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-
+  <link rel="stylesheet" media="screen" href="/assets/css/screen.css" />
+  <link rel="stylesheet" media="print" href="/assests/css/print.css" />
+  <!-- Open Graph Protocol Meta Tags: -->
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
   <meta property="og:type" content="website" />
@@ -45,25 +45,27 @@
   </aside>
 
   <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
-    <p class="credits">
-      The <cite property="dc:title">Companion Site for How to Design and Write Web Pages
-      Today</cite> by
-      <a href="https://karlstolley.com/"
-        property="cc:attributionName"
-        rel="cc:attributionURL">Karl Stolley</a>
-      is licensed under a
-      <a href="http://creativecommons.org/licenses/by/4.0/"
-        rel="license">Creative Commons Attribution 4.0 International License</a>. Based on a work at
-      <a href="https://webpg.es/" rel="dc:source">https://webpg.es/</a>.
-      Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
-      <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a> and
-      <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
-    </p>
-    <p>
-      Spot a problem with this page? Report it on <a
-      href="{{site.webpges_repo}}/issues/new?title=Problem+with+%22{{ page.title | uri_escape }}%22+%28{{page.path}}%29">GitHub</a>.
-    </p>
-  </footer>
+    <ul class="credits">
+      <li class="rights">
+        The <cite property="dc:title">Companion Site for How to Design and Write Web Pages
+        Today</cite> © by
+        <a href="https://karlstolley.com/"
+          property="dc:creator cc:attributionName"
+          rel="cc:attributionURL">Karl Stolley</a>. This work is licensed under a
+        <a href="http://creativecommons.org/licenses/by/4.0/"
+          rel="license">Creative Commons Attribution 4.0 International License</a>. Based on a work
+        at <a href="http://example.com" rel="dc:source">https://webpg.es/</a>.
+      </li>
+      <li class="colophon">
+        Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
+        <a href="https://validator.w3.org/check/referer">HTML</a> and
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+      </li>
+      <li class="problems">
+        Spot a problem with this page? Report it on <a
+        href="{{site.webpges_repo}}/issues/new?title=Problem+with+%22{{ page.title | uri_escape }}%22+%28{{page.path}}%29">GitHub</a>.
+      </li>
+    </ul>
 
 <!--/#page-->
 </div>
