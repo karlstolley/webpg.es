@@ -48,14 +48,15 @@
   <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
     <ul class="credits">
       <li class="rights">
-        The <cite property="dc:title">Companion Site for How to Design and Write Web Pages
-        Today</cite> © by
+        Site content and design by
         <a href="https://karlstolley.com/"
           property="dc:creator cc:attributionName"
-          rel="cc:attributionURL">Karl Stolley</a>. This work is licensed under a
+          rel="cc:attributionURL">Karl Stolley</a>. The <cite property="dc:title">Companion Site for
+        How to Design and Write Web Pages Today, 2nd ed.</cite> is licensed under
         <a href="http://creativecommons.org/licenses/by/4.0/"
-          rel="license">Creative Commons Attribution 4.0 International License</a>. Based on a work
-        at <a href="http://example.com" rel="dc:source">https://webpg.es/</a>.
+          rel="license">Creative Commons</a>. <span class="print">Original work at
+        <a href="https://webpg.es{{ page.url }}"
+          rel="dc:source">https://webpg.es{{ page.url }}</a>.</span>
       </li>
       <li class="colophon">
         Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
@@ -67,6 +68,7 @@
         href="{{site.webpges_repo}}/issues/new?title=Problem+with+%22{{ page.title | uri_escape }}%22+%28{{page.path}}%29">GitHub</a>.
       </li>
     </ul>
+  </footer>
 
 <!--/#page-->
 </div>
