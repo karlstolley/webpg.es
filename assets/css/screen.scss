@@ -16,6 +16,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 */
   $pink: #de01e6; // base pink
   $ltpink: #e069e5; // light pink
+  $dkpink: #c400cb; // dark pink
   $red: #ff3d3d; // base red
   $ltred: #ff7575; // light red
   $orange: #ff9200; // base orange
@@ -36,8 +37,8 @@ html {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  background: #353b41;
-  color: #f8f8f2;
+  background: $background;
+  color: $text;
   font-family: "Aptifer Slab W04";
   font-size: 19px;
   line-height: 26px;
@@ -45,15 +46,12 @@ html {
 }
 
 a {
-  color: #ffa04d; /* orange */
-  color: #ffc475; /* rev desat orange */
-  color: #ff9200; /* rev sat orange */
-
+  color: $ltorange;
   text-decoration: none;
 }
 /*
 nav {
-  background: darken(#353b41, 12%);
+  background: darken($background, 12%);
 }
 */
 pre,
@@ -64,32 +62,21 @@ pre code {
   font-size: 100%;
 }
 nav a {
-  color: #ff609d; /* pink*/
-  color: #de01e6; /* rev sat pink */
-  color: #e069e5; /* rev desat pink */
-  color: #ff3d3d; /* rev base red */
-  color: #ff7575; /* rev desat red */
+  color: $ltred;
 }
 footer {
-   color: #AAA;
+   color: $dktext;
 }
 footer a {
-  color: #80c2ff; /* blue */
-  color: #0f88e5; /* rev sat blue */
-  color: #71b2e4; /* rev desat blue */
-
+  color: $ltblue;
 }
 h1 {
    font-size: 27px;
    line-height: 36px;
-   color: #999;
+   color: grayscale($ltgreen);
 }
 h1 a {
-  color: #ff609d; /* pink*/
-  color: #80c2ff; /* blue */
-  color: #c1ce67; /* green */
-  color: #d4fd00; /* rev sat green */
-  color: #e7fd74; /* rev desat green */
+  color: $ltgreen;
 }
 nav,
 footer,
@@ -97,13 +84,7 @@ footer,
   font-family: "Aptifer Sans W04";
   color: $dktext;
 }
-.tagline {
-  position: absolute;
-  left: -10000px;
-}
-.home .tagline {
-  position: static;
-}
+
 /* Responsive Media */
 audio,
 img,
@@ -127,17 +108,18 @@ cite {
 }
 
 /* ===== LAYOUT STYLES ========== */
-/* Primarily ID selectors for positioning sectioning elements */
 
 
 
 
 /* ===== MODULAR STYLES ========= */
-/* Primarily class selectors for styling unique page components  */
+.tagline,
 #navigation .accessibility {
-  /* Accessibly hide the accessibility components of the navigation */
   position: absolute;
   left: -10000px;
+}
+.home .tagline {
+  position: static;
 }
 .rights,
 .colophon {
@@ -146,11 +128,6 @@ cite {
 
 
 /* ===== STATE STYLES =========== */
-/*
-  Media queries. Also class selectors from JavaScript, including feature detection.
-  JavaScript-dependent styles can be prefixed with the .hasjs class added in by the
-  `js/site.js` file.
-*/
 .print {
   display: none;
 }
@@ -165,7 +142,7 @@ cite {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #f8f8f2;
+  color: $text;
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Monaco, Menlo, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -196,7 +173,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: darken(#353b41, 12%);
+  background: darken($background, 12%);
 }
 
 /* Inline code */
@@ -209,11 +186,7 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: slategray;
-}
-
-.token.punctuation {
-  color: #f8f8f2;
+  color: lighten($background, 30%);
 }
 
 .namespace {
@@ -223,14 +196,12 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #f92672;
-  color: #ff7575; /* custom red */
+  color: $red;
 }
 
 .token.boolean,
 .token.number {
-  color: #ae81ff;
-  color: #dd37e3; /* custom pink */
+  color: $ltpink;
 }
 
 .token.attr-name,
@@ -239,42 +210,42 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #a6e22e;
-  color: #ddfc3c; /* custom green */
+  color: $green;
 }
 
+.token.punctuation,
 .token.operator,
-.token.entity,
 .token.url,
+.token.variable {
+  color: $text;
+}
+
 .language-css .token.string,
 .style .token.string,
-.token.variable {
-  color: #f8f8f2;
-}
-
 .token.attr-value,
 .token.function {
-  color: #e6db74;
-  color: #ffc475; /* custom orange */
+  color: $ltorange;
 }
 
 .token.doctype,
 .token.atrule {
-  color: #c400cb; /* custom dark pink */
+  color: $dkpink;
+}
+
+.token.regex,
+.token.entity {
+  color: $ltred;
 }
 
 .token.tag,
 .token.tag .token.punctuation,
 .token.selector,
 .token.keyword {
-  color: #66d9ef;
-  color: #71b2e4; /* custom blue */
+  color: $ltblue;
 }
 
-.token.regex,
 .token.important {
-  color: #fd971f;
-  color: #ff7575; /* custom red */
+  color: $red;
 }
 
 .token.important,
