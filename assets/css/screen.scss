@@ -56,7 +56,14 @@ nav {
 */
 pre,
 code {
+  font-family: Monaco, Menlo, Consolas, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 90%;
+}
+li > code,
+p > code {
+  color: $ltgreen;
+  background: darken($background, 10%);
+  padding: 0 .2em;
 }
 pre code {
   font-size: 100%;
@@ -145,7 +152,6 @@ pre[class*="language-"] {
   color: $text;
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  font-family: Monaco, Menlo, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
