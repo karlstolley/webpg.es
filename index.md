@@ -17,5 +17,5 @@ Download links and instructions for getting a copy of the Rapid Prototyping Kit 
 
 ### [Documentation](/docs/)
 
-Links to trustworthy documentation and other essential references on the use and state of web
+Links to essential documentation and other references that cover the use and state of web
 standards.
