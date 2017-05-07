@@ -4,8 +4,8 @@ description: Companion site for How to Design and Write Web Pages Today, 2nd Edi
 bodyclass: home
 ---
 
-While I continue building the rest of the site as promised in the book, this page will have links to
-some of the existing, essential pages.
+While I continue building the rest of the site as promised in the book, here are links to some
+important pages.
 
 ### [Software and Setup](/setup/)
 
