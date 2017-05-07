@@ -29,6 +29,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   $dktext: #aaaaaa; // darkened text
   $background: #353b41; // background slate-blue
 
+/*
+  Base font size: 19px;
+  Major 3rd up: 23.75px;
+  Modular Scale (Perfect 5th):
+  http://www.modularscale.com/?19,23.75&px&1.5
+*/
+
+
 
 /* ===== BASE STYLES ============ */
 html {
@@ -57,7 +65,8 @@ nav {
 pre,
 code {
   font-family: Monaco, Menlo, Consolas, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 90%;
+  font-size: 15.833px;
+  line-height: 26px;
 }
 li > code,
 p > code {
@@ -77,19 +86,60 @@ footer {
 footer a {
   color: $ltblue;
 }
-h1 {
-   font-size: 27px;
-   line-height: 36px;
-   color: grayscale($ltgreen);
-}
-h1 a {
-  color: $ltgreen;
-}
+
+h3,
+h4,
+h5,
 nav,
 footer,
 .tagline {
   font-family: "Aptifer Sans W04";
   color: $dktext;
+}
+h3,
+h4,
+h5 {
+  color: $text;
+  font-weight: bold;
+}
+h1 {
+  font-size: 28.5px;
+  line-height: 39px; // line and a half
+  color: grayscale($ltgreen);
+}
+h1 a {
+  color: $ltgreen;
+}
+h2 {
+  font-size: 35.625px;
+  line-height: 39px; // line and a half
+  padding-bottom: 13px;
+}
+h3 {
+  font-size: 23.75px;
+  line-height: 39px; // line and a half
+}
+
+p {
+  padding: 13px 0 13px 0;
+}
+h2 + p,
+h3 + p {
+  padding-top: 0;
+}
+h2 + p {
+  font-style: italic;
+}
+p + h2,
+p + h3 {
+  padding-top: 13px;
+}
+li {
+  padding-bottom: 13px;
+}
+#content ul li {
+  list-style-type: square;
+  margin-left: 26px;
 }
 
 /* Responsive Media */
@@ -115,7 +165,12 @@ cite {
 }
 
 /* ===== LAYOUT STYLES ========== */
-
+#header {
+  padding-bottom: 52px;
+}
+#footer {
+  padding-top: 52px;
+}
 
 
 
@@ -131,6 +186,9 @@ cite {
 .rights,
 .colophon {
   display: inline;
+}
+.problems {
+  padding-top: 13px;
 }
 
 
@@ -157,11 +215,10 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
 
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -171,8 +228,8 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
+  padding: 13px;
+  margin: 0;
   overflow: auto;
   border-radius: 0.3em;
 }
